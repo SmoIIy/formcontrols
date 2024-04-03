@@ -13,16 +13,32 @@
         <label for="name">Navn</label>
         <input type="text" name="name" id="name">
 
-        <label for="ingredients">Ingredienser</label>
-        <input type="text" name="ingredients" id="ingredients">
+       <div class="form-group">
+            <label for="ingredients">
+                Ingredienser
+                <input type="text" name="ingredients" id="ingredients">
+            </label>
+            
+       </div>
 
-        <label for="serves">Til :</label>
-        <input type="number" name="serves" id="serves">
+      <div class="form-group">
+            <label for="serves">Til :</label>
+            <input type="range"
+            step="1"
+            min="1"
+            max="5"
+            value="3"
+            list="al"
+            id="serves"
+            name="serves"/>
+      </div>
 
-        <label for="origin">Origin</label>
-        <input type="text" name="origin" id="origin">
+        <div class="form-group">
+            <label for="origin">Origin</label>
+            <input type="text" name="origin" id="origin">
+        </div>
 
-        <div>
+        <div class="form-group">
             <label for="studentfriendly">Studentfriendly
                 <input type="radio" name="studentfriendly" id="studentfriendly" value="true">
             </label>
@@ -31,14 +47,30 @@
             </label>
         </div>
         
-        <label for="diet">Diet</label>
-        <input type="text" name="diet" id="diet">
-        <label for="diet">Alergens</label>
-        <input type="text" name="allergens" id="allergens">
+        <div class="form-group">
+            <label for="diet">
+                Diet
+                <input type="text" name="diet" id="diet">
+            </label>
+            
+        </div>
+        
+        <div class="form-group">
+            <label for="allergens">
+                Alergens
+                <textarea name="allergens" id="allergens" cols="30" rows="10"></textarea>
+            </label>
+            
+        </div>
         
 
-        <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <div class="form-group">
+            <label for="description">
+                Description
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </label>
+            
+        </div>
 
         <input type="submit" value="Gem">
     </form>
