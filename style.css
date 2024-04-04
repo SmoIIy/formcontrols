@@ -17,6 +17,7 @@ form {
     input {
         border-radius: 0.5rem;
         border: 0.5px solid #e2e2e2;
+        padding: 0.5rem;
     }
     textarea {
         border-radius: 0.5rem;
@@ -26,6 +27,14 @@ form {
         margin-block: 1rem;
     }
 }
+.hint {
+    color: hsl(249deg 15% 45%);
+    line-height: 1.25;
+    font-size: .9rem;
+    font-weight: 400;
+    font-variation-settings: "wdth" 95;
+}
+
 
 .card {
     max-width: 35ch;
@@ -75,6 +84,12 @@ form {
     }
 }
 
+.form-group {
+    display: grid;
+    gap: 5px;
+}
+
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -86,4 +101,8 @@ form {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     margin: -1px;
+}
+
+fieldset {
+    border-radius: 1rem;
 }

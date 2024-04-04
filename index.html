@@ -10,19 +10,31 @@
 <body>
     <h1>Form Control</h1>
     <form action="#">
-        <label for="name">Navn</label>
-        <input type="text" name="name" id="name" required>
+        <div class="form-group">
+            <label for="name">Navn</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">
+                Description
+                
+            </label>
+            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+            
+        </div>
 
        <div class="form-group">
             <label for="ingredients">
                 Ingredienser
-                <input type="text" name="ingredients" id="ingredients" required>
+
             </label>
-            
+            <span class="hint">Please insert one ingredient per line</span>
+            <textarea name="ingredients" id="ingredients" cols="30" rows="10" required></textarea>
        </div>
 
       <div class="form-group">
             <label for="serves">Serves</label>
+            <span class="hint">How many does the recipe serve?</span>
             <input type="range"
             step="1"
             min="1"
@@ -41,43 +53,50 @@
       </div>
 
         <div class="form-group">
-            <label for="origin">Origin</label>
-            <input type="text" name="origin" id="origin">
-        </div>
+            <label for="origin">
+              Origin
+            </label>
+            <span class="hint">Where is the recipe from?</span>
+            <input type="text" id="origin" name="origin" list="countrylist" />
+            <datalist id="countrylist">
+              <option value="Denmark"></option>
+              <option value="Sweden"></option>
+              <option value="Norway"></option>
+            </datalist>
+          </div>
 
-        <div class="form-group">
-            <label for="studentfriendly">Studentfriendly
-                <input type="radio" name="studentfriendly" id="studentfriendly" value="true">
-            </label>
-            <label for="notstudentfriendly">Not
-                <input type="radio" name="studentfriendly" id="notstudentfriendly" checked value="false">
-            </label>
-        </div>
+        <fieldset>
+            <Legend id="radio-legend">Studentfriendly</Legend>
+            <div class="form-group">
+                <label for="studentfriendly">Yes
+                    <input type="radio" name="studentfriendly" id="studentfriendly" value="true">
+                </label>
+                <label for="notstudentfriendly">No
+                    <input type="radio" name="studentfriendly" id="notstudentfriendly" checked value="false">
+                </label>
+            </div>
+        </fieldset>
         
         <div class="form-group">
             <label for="diet">
-                Diet
+                Diet</label>
+                <span class="hint">Is the recipe Vegetarian or Vegan?</span>
                 <input type="text" name="diet" id="diet" required>
-            </label>
+            
             
         </div>
         
         <div class="form-group">
             <label for="allergens">
                 Alergens
-                <textarea name="allergens" id="allergens" cols="30" rows="10" required></textarea>
+                
             </label>
-            
+            <span class="hint">What allergens are present?</span>
+            <textarea name="allergens" id="allergens" cols="30" rows="10" required></textarea>
         </div>
         
 
-        <div class="form-group">
-            <label for="description">
-                Description
-                <textarea name="description" id="description" cols="30" rows="10" required></textarea>
-            </label>
-            
-        </div>
+
 
         <input type="submit" value="Gem">
     </form>
