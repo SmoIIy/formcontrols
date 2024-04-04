@@ -26,3 +26,64 @@ form {
         margin-block: 1rem;
     }
 }
+
+.card {
+    max-width: 35ch;
+    border: solid white 1px;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+
+    header {
+        
+    }
+    &>*+* {
+        margin-block-start: 1rem;
+    }
+    img {
+        inline-size: 100%;
+        object-fit: cover;
+        aspect-ratio: 2;
+    }
+    .actions {
+        display: flex;
+        justify-content: space-around;
+    
+    
+        button {
+            all: unset;
+            margin-inline: 0.5rem;
+            border: solid #f42069 1px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: hsl(var(--theme-color));
+            padding: 0.5rem;
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+            border-radius: 3px;
+        
+            &:hover,
+            &:focus-visible {
+            background: hsl(0 0% 85% / 30%);
+            }
+        
+            &:first-of-type {
+            order: -1;
+            }
+        }
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}

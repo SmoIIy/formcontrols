@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    
 </head>
 <body>
     <h1>Form Control</h1>
@@ -74,5 +74,56 @@
 
         <input type="submit" value="Gem">
     </form>
+    <template>
+        <article class="card">
+          <header>
+            <div class="header-content">
+              <h2>
+                <span data-name>Brændende kærlighed</span>,
+                <span data-origin>Denmark</span>
+              </h2>
+  
+              <div>
+                <dl>
+                  <div>
+                    <dt class="visually-hidden">Species</dt>
+                    <dd data-origin>Denmark</dd>
+                  </div>
+                </dl>
+                <dl>
+                  <div>
+                    <dt class="visually-hidden">Diet</dt>
+                    <dd data-diet>Vegetarian</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <p class="status">
+              <span data-studentFriendly>Student Friendly!</span>
+            </p>
+            <img
+              data-img
+              src="https://source.unsplash.com/random/600x300?random"
+              alt=""
+            />
+          </header>
+          <dl class="ingredient-list" data-ingredients>
+            <dt class="visually-hidden">Ingredients</dt>
+          </dl>
+          <section>
+            <h3>Serves</h3>
+            <meter data-serves min="0" max="5" low="0" high="5" value="3"></meter>
+          </section>
+          <div class="actions">
+            <button data-id="15" data-action="delete">Slet</button>
+            <button data-id="15" data-action="update">Opdater</button>
+          </div>
+          <p data-createdAt></p>
+        </article>
+    </template>
+    <section class="recipes">
+
+    </section>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
