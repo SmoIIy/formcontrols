@@ -43,3 +43,28 @@ import {
   });
 }
 showRecipes();
+
+function handleSubmit() {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async (e) => {
+      console.log(e);
+      //stop refresh
+      e.preventDefault();
+      const formData = new FormData(form);
+      console.log(formData.get("ingredients").split("\n"));
+  
+      await createRecipe({
+        name: formData.get("name"),
+        description: formData.get("description"),
+        ingredients: formData.get("ingredients").split("\n"),
+        serves: formData.get("serves"),
+        allergens: formData.get("allergens").split("\n"),
+        diet: formData.get("diet"),
+        studentFriendly: formData.get("studentFriendly"),
+        origin: formData.get("origin"),
+      });
+      showRecipes();
+    });
+  }
+  handleSubmit();
+  
