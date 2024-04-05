@@ -20,6 +20,10 @@ import {
         clone.querySelector("[data-name]").textContent = rec.name;
         clone.querySelector("[data-origin]").textContent = rec.origin;
         clone.querySelector("[data-createdAt").textContent = "Created at " + rec.created_at;
+
+        clone.querySelector("[data-allergens").textContent = rec.allergens;
+        clone.querySelector("[data-diet").textContent = rec.diet;
+
         if (rec.studentFriendly) {
         clone.querySelector(".status").hidden = false;
         } else {
